@@ -114,6 +114,80 @@
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/12/neo4j-18m04-happy-paths/">Neo4j 1.8.M04 - Happy Paths</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-12T00:00:00-04:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<a href="https://github.com/tinwelint"><img alt="" border="0" src="http://neo4j.org/img/mattias.jpg" style="cursor: hand; cursor: pointer; float: left; height: 283px; margin: 0 10px 10px 0; width: 204px;" /></a><br />Neo4j 1.8 Milestone 4 is available today, offering a few new ways to help you find happy paths. To query a graph you use a traversal, which identifies paths of nodes and relationships. This release updates the capabilities of Neo4j&#8217;s core Traversal Framework and introduces new ways to use paths in Cypher.<br /><h2>Graph Sherpa Mattias Persson</h2><a href="https://github.com/tinwelint">Mattias Persson</a>&nbsp;works throughout the Neo4j code base, but is particularly well acquainted with the Traversal Framework, a core component of the Neo4j landscape. He&#8217;s agreed to guide us on a traversal tour:<br /><em>AK</em>: So, what exactly is a Traversal?<br /><em>MP</em>: I would say from one or more given nodes in your graph move around to other nodes via their connected relationships in search of your answer. The traversal can be controlled in different ways, for example which relationships to traverse at any given position, ordering and so on. The general outcome is a list of paths from which the relevant information can be extracted.<br /><em>AK</em>: And the Traversal Framework, then. Is it just for describing a Traversal?<br /><em>MP</em>: Sure, it&#8217;s for describing where the traversal should go and also implementation to execute the traversal itself.<br /><em>AK</em>: Can you give an example, like how would I find the friends of my friends?<br /><em>MP</em>: So here the starting point is you, the node representing you. And you&#8217;d tell the traversal to follow KNOWS relationships or similar down to depth 2. Also every friend of friend should only be returned once (such uniqueness is by default). So in embedded code:<br /><pre class="brush: java">Iterable&lt;Node&gt; friendsOfFriends = traversal()<br />  .breadthFirst()<br />  .relationships(KNOWS)<br />  .evaluator(Evaluators.atDepth(2))<br />  .traverse().nodes();</pre><em>AK</em>: OK, interesting. It&#8217;s such a different way of querying, though. For people who are new to Traversals, what&#8217;s your advice for how to &#8216;get it&#8217;?<br /><i>MP</i>: Look at traversals as local, where instead of having your entire database and query globally by matching values, you start at a known point where your relationships becomes your index and lead you to what you&#8217;re looking for. So you describe how the traversal will behave, where it should go and not go and you receive callbacks about relevant data, as per your description.<br /><em>AK</em>: And what are the benefits of the new update to the Traversal Framework?<br /><em>MP</em>: There are some additions here. One is bidirectional traversals, which is essentially like describing two traversals, one from each side (meaning one or more given start nodes) and where they collide in the middle will produce results in the form of paths. In most scenarios where you know both the start and end node(s) a bidirectional traversal will get you your answer with much less relationships traversed, i.e. faster traversal. Reason being that number of relationships needed to be traversed on each depth increases exponentially, so by traversing half the depth from each side cuts down on that growth. The &#8220;all paths&#8221; and &#8220;all simple paths&#8221; implementations in the graph-algo collection uses bidirectional traversals now. Dijkstra and A* will probably move over to that as well, and it&#8217;s essentially just a small change in your traversal description to make it bidirectional.<br />There&#8217;s also an addition to the &#8220;expander&#8221;, i.e. the one responsible for deciding which relationships to follow given a position in the traversal. Previously it could only make decisions based on the node for the current position, but now it can view the whole path leading up to the current position.<br />Also some minor things like being able to get metadata about the traversal (number of relationships visited and so forth), more convenience methods on Path interface.<br /><i>AK</i>: Nice. That&#8217;s a lot of good stuff. How will REST users be able to take advantage of these new capabilities?<br /><i>MP</i>: Well, you can soon expect Cypher to optimize queries that can take advantage of it. That&#8217;s the usual thing, just keep writing queries and we&#8217;ll keep making them faster.<br /><i>AK</i>: Thanks so much Mattias for all the hard work.<br /><h2>Paths as Expressions</h2>In Cypher, much of the work in a statement involves working with paths. Now, paths themselves can be treated as expressions. This is most immediately explained with a simple example. Prior to 1.8.M04, you could capture a path with an identifier like this:<br /><pre class="brush: sql">START n=node(...), m=node(...) <br />    match p=n--&gt;()&lt;--m <br />    return collect(p) as allPaths</pre>With paths as expressions, that can be re-written as:<br /><pre class="brush: sql">START n=node(...), m=node(...) <br />    return n--&gt;()&lt;--m as allPaths</pre>Simply return the path that you want. There are, of course, much more fun things that can be done with this, which we&#8217;ll leave to explore another time. Because the best thing to do right now is&#8230;<br /><h2>Try Neo4j 1.8.M04</h2>Neo4j 1.8.M04 is available:<br /><ul><li>for immediate <a href="http://neo4j.org/download">download on Neo4j.org</a></li><li>provisioning on Heroku with heroku addons:add neo4j &#8211;neo4j-version 1.8.M04</li><li>discussion on the <a href="http://neo4j.org/forums">Neo4j Google Group</a></li><li>questions on <a href="http://stackoverflow.com/questions/tagged/neo4j">Stack Overflow tag #neo4j</a></li></ul><br />Cheers,<br />the Neo4j Team</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/08/graphconnect-graph-leadership/">GraphConnect: Graph Leadership Visualized</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-08T00:00:00-04:00" pubdate data-updated="true">Jun 8<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<br /><table border="0" height="213" style="width: 592px;"><tbody><tr><td>Heyo, <br />It&#8217;s been a while, and I have missed you all. I am extremely stoked to announce <a href="http://graphconnect.com/">GraphConnect</a>, a conference that is all about graphs, and the graphs you find in your day to day life.</td><td><img alt="http://3.bp.blogspot.com/-5eF5mHfPkuY/T9E1AxfXUvI/AAAAAAAAAKA/PjAt5vVe1nI/s1600/cloud+shirt.jpg" height="183" src="http://3.bp.blogspot.com/-5eF5mHfPkuY/T9E1AxfXUvI/AAAAAAAAAKA/PjAt5vVe1nI/s1600/cloud+shirt.jpg" style="cursor: -moz-zoom-in;" width="188" /></td></tr><tr><td></td><td></td></tr></tbody></table><h3>      <b>Who:</b></h3>We have some great featured speakers lined up<br /><br /><table border="0" height="350" style="width: 600px;"><tbody><tr><td align="center" valign="middle"><a href="http://www.graphconnect.com/#speakers" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img alt="" border="0" height="150" src="http://2.bp.blogspot.com/-_KIQJ_77S-s/T9EkNe8QPlI/AAAAAAAAAJE/3ATkRz9d03Q/s200/fowler.png" width="150" /></a></td><td align="left" valign="middle"><b>James Fowler, Co-Author of Connected.</b> His book Connected discusses the importance and impact of your social graph. <a href="http://www.colbertnation.com/the-colbert-report-videos/260955/january-07-2010/james-fowler">Here&#8217;s his interview with Stephen Colbert</a>.</td></tr><tr><td align="center" valign="middle"><a href="http://www.graphconnect.com/#speakers" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img alt="" border="0" height="150" src="http://1.bp.blogspot.com/-BkQyLtp_meg/T9EkqF6NwOI/AAAAAAAAAJM/WjG9Hx-BcxM/s200/parsons.png" width="150" /></a></td><td align="left" valign="middle"><b>Rebecca Parsons, CTO of ThoughtWorks</b> With more than 20 years of application development experience, Rebecca will present on today&#8217;s  evolving data, and how it can be used in today&#8217;s modern society. <a href="http://www.infoq.com/presentations/The-Evolving-Panorama-of-Data">Here&#8217;s a video of one of her talks at QCon London</a>.</td></tr></tbody></table><h3>    <b>What:</b></h3>What is this conference about? It&#8217;s about connecting and celebrating Graph&#8217;s new relevance with modern data. GraphConnect SF is a place where developers, technical decision makers, and thought  leaders alike will convene to celebrate <a href="http://www.neotechnology.com/2012/05/the-power-of-the-graph/">modern data and its expanding connectedness</a>, through graph databases, network analysis, social  applications and open-source projects. Oh and we will also have a sweet After Party with food, drinks and a fantastic view.<br /><br />GraphConnect will include Tutorials, an unConference, and some great presentations, jam packed into two days. <br /><h3>   <b>When:</b></h3><b>5-6 November 2012.</b> Going to <a href="http://qconsf.com/">QCon SF</a>? Perfect, you are in town to join us before.<br /><br /><h3>         <b>Where:</b></h3>The Hyatt Regency downtown, with the After Party right across the street.<br /><b> </b><br /><table border="0" cellpadding="6" style="width: 466px;"><tbody><tr><td align="center" valign="top"><h3>           <img alt="graphconnect.jpg" height="123" src="http://www.graphconnect.com.php53-1.dfw1-2.websitetestlink.com/wp-content/uploads/2012/06/graphconnect.jpg" width="188" /></h3></td><td align="left" valign="top"><h4>          GraphConnect 2012</h4><b><a href="http://sanfranciscoregency.hyatt.com/hyatt/hotels-sanfranciscoregency/index.jsp?null">Hyatt Regency Embarcadero</a></b><br />5 Embarcadero Center,<br />San Francisco, California, USA 94111</td></tr><tr><td valign="top"></td><td align="left" valign="top"></td></tr><tr><td valign="middle"><img alt="" height="126" src="http://www.graphconnect.com.php53-1.dfw1-2.websitetestlink.com/wp-content/uploads/2012/06/sens-restaurant2.jpg" width="188" /></td><td align="left" valign="top"><h4>         After Party</h4><b><a href="http://www.sens-sf.com/">Sens Restaurant</a></b><br />4 Embarcadero Center<br />Promenade Level<br />San Francisco, California 94111</td></tr></tbody></table><h3>           <b>Why:</b></h3>I don&#8217;t see any reason why not. A Graph Conference is extremely fitting for a company like Neo, where we value relationships just as much as the nodes themselves. Also, with Neo4j being the world&#8217;s leading database, it makes sense that we are pioneering the graph space and its dialogue.<br /><h3>           <b>How:</b></h3><b>How can you participate? </b>We have multiple ways you can get involved, based on your love for graphs.<br /><br /><span style="font-size: large;"><span style="font-size: large;"><a href="https://graphconnect2012.busyconf.com/bookings/new"><b>Register:</b></a></span> </span>Hop on the Early Adopter price. Community heard it first.<br /><br /><span style="font-size: small;"><span style="font-size: large;"><a href="http://graphconnect.com/"><b>Sign up for GraphConnect Updates:</b></a></span> </span>Keep up to date with new speakers, new promos, and fun events leading up to the conference.<br /><i style="font-weight: normal;">Click on the home page, fill in your email to the right, under the section &#8220;Keep Me Informed on GraphConnect!&#8221;</i><br /><br /><span style="font-size: large;"><a href="http://www.graphconnect.com/"><b>Join our Advisory Board:</b></a></span> Want to help mold GraphConnect? We are devising a group that will be intimately involved with the preparation and structure of the conference. Again, we are nothing without our Community, and would love to get you all involved from the get-go.<br /><i>Click on the home page, fill in your email to the right, and check &#8220;Yes, I would like to be part of the GraphConnect Advisory Board.&#8221;</i><br /><br /><b> <span style="font-size: large;"><a href="https://graphconnect2012.busyconf.com/proposals/new">Propose your Graph:</a></span> </b>Want to be a part of GraphConnect? Have a cool project on a graph database, or some cool data visualized? Show us, we would love to hear from you.<br /><br /><span style="font-size: large;"><b><a href="mailto:graphconnect@neotechnology.com">Sponsor:</a> </b></span>Get your brand out in front of the GraphConnect community. Email us at graphconnect@neotechnology.com<br /><br /><table border="0" height="71" style="width: 553px;"><tbody><tr><td align="center" valign="middle"><span style="font-size: 14px;"><span style="color: #f1592c; font-family: helvetica;"><a href="http://heroku.com/" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img alt="" border="0" height="47" src="http://3.bp.blogspot.com/-SmKmkOBuIOk/T9ExU71PnOI/AAAAAAAAAJg/JvxDCVgDF6M/s1600/heroku-logo-light-234x60.png" width="184" /></a></span></span></td><td align="center" valign="middle"><span style="font-size: 14px;"></span><a href="http://springsource.com/"><span style="font-size: 14px;"><img alt="" border="0" height="46" src="http://1.bp.blogspot.com/-l7dGwA2SsYE/T9ExVHKwzSI/AAAAAAAAAJo/2c4KifW0T4E/s200/springsource.png" width="150" /></span></a></td><td align="center" valign="top"><br /><a href="http://thoughtworks.com/"><img alt="" border="0" height="26" src="http://3.bp.blogspot.com/-0NxBVDFo4g4/T9ExUUN8XKI/AAAAAAAAAJY/NMCLSBxr_ZQ/s200/Thoughtworks-logo.png" width="174" /></a></td></tr></tbody></table><h4> <a href="http://twitter.com/ayeeson">-ayeeson</a></h4></div>
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
     <a href="/blog/archives">Blog Archives</a>
@@ -130,6 +204,14 @@
         <a href="/blog/2012/06/13/re-presenting-neo4j-dot-org/">Re-presenting Neo4j.org</a>
       </li>
     
+      <li class="post">
+        <a href="/blog/2012/06/12/neo4j-18m04-happy-paths/">Neo4j 1.8.M04 - Happy Paths</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/08/graphconnect-graph-leadership/">GraphConnect: graph leadership visualized</a>
+      </li>
+    
   </ul>
 </section>
 
@@ -139,7 +221,7 @@
     <li class="loading">Status updating&#8230;</li>
   </ul>
   
-  <a href="https://github.com/neo4j">@neo4j</a> on GitHub
+  <a href="https://github.com/akollegger">@akollegger</a> on GitHub
   
   <script type="text/javascript">
     $.domReady(function(){
@@ -152,7 +234,7 @@
         }
 
         github.showRepos({
-            user: 'neo4j',
+            user: 'akollegger',
             count: 4,
             skip_forks: true,
             target: '#gh_repos'

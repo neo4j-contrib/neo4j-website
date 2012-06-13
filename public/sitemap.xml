@@ -1,15 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://neo4j-org.heroku.com/blog/2012/06/08/graphconnect-graph-leadership/</loc>
+        <lastmod>2012-06-13T12:10:48-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://neo4j-org.heroku.com/blog/2012/06/12/neo4j-18m04-happy-paths/</loc>
+        <lastmod>2012-06-13T12:10:48-04:00</lastmod>
+    </url>
+    <url>
         <loc>http://neo4j-org.heroku.com/blog/2012/06/13/re-presenting-neo4j-dot-org/</loc>
         <lastmod>2012-06-13T11:32:11-04:00</lastmod>
     </url>
     <url>
         <loc>http://neo4j-org.heroku.com/blog/archives/</loc>
-        <lastmod>2012-06-13T11:32:11-04:00</lastmod>
+        <lastmod>2012-06-13T12:10:48-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://neo4j-org.heroku.com/download/</loc>
+        <lastmod>2012-06-13T11:42:23-04:00</lastmod>
     </url>
     <url>
         <loc>http://neo4j-org.heroku.com/</loc>
-        <lastmod>2012-06-13T11:32:11-04:00</lastmod>
+        <lastmod>2012-06-13T12:10:48-04:00</lastmod>
     </url>
 </urlset>
