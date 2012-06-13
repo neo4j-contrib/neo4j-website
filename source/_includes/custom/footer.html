@@ -1,4 +1,50 @@
-<p>
-  Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }} -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
+<!-- Super Container -->
+<footer class="super-container full-width" id="section-footer">    
+
+  <!-- 960 Container -->
+  <div class="container">
+  
+    <!-- footer -->
+    <footer>
+            
+
+      <div class="one-third column alpha">
+        {% include custom/asides/about.html %}
+      </div>
+      <div class="one-third column">
+        {% include asides/twitter.html %}
+      </div>
+      <div class="one-third column omega">
+        {% include asides/recent_posts.html %}
+      </div>
+
+            
+    </footer>
+    <!-- /End Footer -->    
+
+  </div>
+  <!-- /End 960 Container -->
+  
+</footer>
+<!-- /End Super Container -->
+
+
+<!-- Super Container -->
+<div class="super-container full-width" id="section-sub-footer">    
+
+  <!-- 960 Container -->
+  <div class="container">
+
+    <div class="sixteen columns"> 
+        <span class="copyright">&copy; {{ site.time | date: "%Y" }} - {{ site.author }}</span>
+        <span class="colophon">With love, from Sweden.</span>
+    </div>
+
+  </div>
+  <!-- /End 960 Container -->
+  
+</div>
+<!-- /End Super Container -->   
+
+
+

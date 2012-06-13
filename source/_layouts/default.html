@@ -3,8 +3,8 @@
 <body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} {% if page.sidebar == false %} class="no-sidebar" {% endif %} {% if page.sidebar == 'collapse' or site.sidebar == 'collapse' %} class="collapse-sidebar sidebar-footer" {% endif %}>
   <header role="banner">{% include header.html %}</header>
   <nav role="navigation">{% include navigation.html %}</nav>
-  <div id="main">
-    <div id="content">
+  <div id="main" class="super-container full-width" >
+    <div id="content" class="container">
       {{ content | expand_urls: root_url }}
     </div>
   </div>
