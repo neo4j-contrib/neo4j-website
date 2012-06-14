@@ -39,14 +39,14 @@ function addSidebarToggler() {
 }
 
 function testFeatures() {
-  var features = ['maskImage'];
-  $(features).map(function(feature) {
-    if (Modernizr.testAllProps(feature)) {
-      $('html').addClass(feature);
-    } else {
-      $('html').addClass('no-'+feature);
-    }
-  });
+  // var features = ['maskImage'];
+  // $(features).map(function(feature) {
+  //   if (Modernizr.testAllProps(feature)) {
+  //     $('html').addClass(feature);
+  //   } else {
+  //     $('html').addClass('no-'+feature);
+  //   }
+  // });
   if ("placeholder" in document.createElement("input")) {
     $('html').addClass('placeholder');
   } else {
