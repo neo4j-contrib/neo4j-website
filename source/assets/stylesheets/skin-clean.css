@@ -39,6 +39,12 @@ ul.tabs li a.active:after{
 	background: #333;
 }
 
+#logo img {
+	width: 44px;
+	height: 55px;
+	margin-right: 12px;
+}
+
 /* SUBFOOTER */
 #section-sub-footer{
 	background: black;
