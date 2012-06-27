@@ -156,9 +156,9 @@ $(window).load(function () {
 /*-----------------------------------------------------------------------------------*/
 
 		$('.flexslider').flexslider({
-			animation: "slide",              //Select your animation type (fade/slide)
+			animation: "fade",              //Select your animation type (fade/slide)
 			slideshow: true,                //Should the slider animate automatically by default? (true/false)
-			slideshowSpeed: 7000,           //Set the speed of the slideshow cycling, in milliseconds
+			slideshowSpeed: 10000,           //Set the speed of the slideshow cycling, in milliseconds
 			animationDuration: 500,         //Set the speed of animations, in milliseconds
 			directionNav: true,             //Create navigation for previous/next navigation? (true/false)
 			controlNav: true,               //Create navigation for paging control of each clide? (true/false)

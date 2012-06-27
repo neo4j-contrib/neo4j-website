@@ -770,7 +770,7 @@ span.grid_btn, span.list_btn, span.hybrid_btn {margin-right: 3px; margin-top: 0p
 
 .slider-shadow:after {
 	content:"\00a0";
-	background: url("../images/theme/slide-shadow.png") bottom center;
+	background: url("../images/theme/half-slide-shadow.png") bottom center;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
 	-o-background-size: contain;

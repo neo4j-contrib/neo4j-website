@@ -8,12 +8,6 @@ layout: default
     <div class="sixteen columns">
 
       <article role="article">
-      {% if page.title %}
-        <header>
-          <h2 class="entry-title title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h2>
-          {% if page.date %}<p class="meta">{% include post/date.html %}{{ time }}</p>{% endif %}
-        </header>
-        {% endif %}
       
         {{ content }}
         {% unless page.footer == false %}
