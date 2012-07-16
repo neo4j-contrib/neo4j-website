@@ -1,0 +1,16 @@
+/* @override http://localhost:4000/assets/stylesheets/icons.css */
+
+.icon {
+  height: 16px;
+  width: 16px;
+	display: block;
+	float: right;
+	margin-left: 8px;
+}
+
+.curtain-open .icon.curtain {
+	background-image: url(/assets/images/theme/icons/Interface-50.png);
+}
+.icon.curtain {
+	background-image: url(/assets/images/theme/icons/Interface-49.png);
+}

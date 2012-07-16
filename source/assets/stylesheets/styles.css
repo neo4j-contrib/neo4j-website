@@ -1,4 +1,6 @@
-/* @override http://localhost:4000/assets/stylesheets/styles.css */
+/* @override 
+	http://localhost:4000/assets/stylesheets/styles.css
+*/
 
 /*
 * Super Skeleton
@@ -32,12 +34,14 @@
 
 @import url("comments.css"); 	/* Comments Styling (for default WP) */ 
 @import url("buttons.css"); 	/* Button Colors - long, gnarly style code */ 
+@import url("icons.css");
 @import url("superfish.css");  	
 @import url("flexslider.css");  								/* Superfish Defaults for the Theme (skins are in this doc, below) */ 
 @import url("../javascripts/chosen/chosen.css");   				/* Chosen dropdown menu Styles */ 
 @import url("../javascripts/prettyPhoto/css/prettyPhoto.css");  /* prettyPhoto Styles */ 
 
-@import url("typography-sans.css"); 	/* Typography Font Stack */ 
+@import url("skin-clean.css");
+@import url("typography.css"); 	/* Typography Font Stack */ 
 
 
 
@@ -216,17 +220,13 @@ ul.square, ul.circle, ul.disc {
 /* #HEADER */
 #section-header{}
 h1#logo{
-	margin-top: 30px;
-	margin-bottom: 20px;
 	vertical-align: top;
 }
 
 /* Header / Sidebar Advertisement */
 .header-advert{
-	margin-top: 30px;
-	margin-bottom: 20px;
-	float: right; 
-	}
+	float: right;
+}
 a.header-advert img, a.sidebar-advert img{ 
 	padding: 6px;
 	background: #eee; 
@@ -238,6 +238,9 @@ a.header-advert:hover img, a.sidebar-advert:hover img{
 }
 .header-advert p {
   margin-bottom:0px;
+}
+.header-advert strong {
+  color: #fffeff;
 }
 
 /* Header buttons */
@@ -593,7 +596,8 @@ and (max-width: 960) {
 /* ======================================================= */
 .module, .module-img{position: relative; overflow: hidden;}
 .module{margin-bottom: 7px;}
-.module-meta {display: inline;} 
+.module-meta {display: inline; height: 200px;
+} 
 .module-img{text-align: center;}
 
 /* The lightbox and full post link styles */
@@ -647,10 +651,10 @@ and (max-width: 960) {
     outline: medium none;
     position: relative;
     text-decoration: none;
-    background: black;
+    background: white;
     z-index: 2;}
     
-.module-img:hover img{opacity: 0.09;}
+.module-img:hover img{opacity: 0.8;}
 
 .module-img span{
 	background: url("../images/theme/img-bg-pat.png") repeat scroll center center;
@@ -715,13 +719,18 @@ and (max-width: 960) {
 
 #portfolio-list .module-meta.visible{display: inline;}
 
+.portfolio-filters span {
+  display: block;
+}
+
 span.list_btn:hover, span.grid_btn:hover, span.hybrid_btn:hover{cursor: pointer;}
 
 .portfolio-filters{float: left;}
 
 .portfolio-view{float: right;}
 
-.portfolio-filters span, .portfolio-view span{margin-right: 10px;}
+.portfolio-filters span, .portfolio-view span{margin-right: 10px; float: left;
+}
 
 .portfolio-view span{float: left; margin-top: 6px;}
 

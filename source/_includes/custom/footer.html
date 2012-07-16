@@ -1,32 +1,37 @@
-<!-- Super Container -->
 <footer class="super-container full-width" id="section-footer">    
 
   <!-- 960 Container -->
   <div class="container">
   
-    <!-- footer -->
-    <footer>
-            
 
       <div class="one-third column alpha">
-        {% include custom/asides/about.html %}
-      </div>
-      <div class="one-third column">
-        {% include asides/twitter.html %}
-      </div>
-      <div class="one-third column omega">
         {% include asides/recent_posts.html %}
       </div>
-
-            
-    </footer>
-    <!-- /End Footer -->    
+      <div class="one-third column">
+        {% include custom/asides/events.html %}
+      </div>
+      <div class="one-third column omega">
+      </div>
 
   </div>
   <!-- /End 960 Container -->
+  <div class="container">
+    <div class="feature eight columns">
+			<form action="http://groups.google.com/group/neo4j/boxsubscribe" id="SubscribeForm">
+					<fieldset class="selfClear">
+						<label for="regularInput">Join the discussion:</label>
+						<input type="hidden" name="hl" value="en">
+						<input type="email" name="email" class="email" placeholder="Your Email" required="required">
+						<button type="submit">Join</button>
+					</fieldset>
+			</form>
+    </div>
+    <div class="feature eight columns">
+    
+    </div>
   
+  </div>
 </footer>
-<!-- /End Super Container -->
 
 
 <!-- Super Container -->
@@ -36,7 +41,7 @@
   <div class="container">
 
     <div class="sixteen columns"> 
-        <span class="copyright">&copy; {{ site.time | date: "%Y" }} - {{ site.author }}</span>
+        <span class="copyright">&copy; {{ site.time | date: "%Y" }} - <a href="http://neotechnology.com"><img src="{{ root_url }}/assets/images/theme/neotech-logo/tiny-neo.png"></a></span>
         <span class="colophon">With love, from Sweden.</span>
     </div>
 

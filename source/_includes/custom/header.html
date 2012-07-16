@@ -1,162 +1,75 @@
 
-
-<!-- Super Container for tophat -->
-<div class="super-container full-width" id="section-tophat">
-
-  <!-- 960 Container -->
-  <div class="container">     
+<!-- Header -->
+<div class="main-header clearfix super-container full-width ">
+  <div class="container"> <!-- 960grid -->
+    <hgroup class="six columns alpha">
+      <a class="browse" href="#"><h1 id="logo"><img src="{{ root_url }}/assets/images/theme/neo4j-logo/header-logo.png" alt="logo"></h1></a>
+    </hgroup>
     
-    <div class="sixteen columns">
-      <ul class="sf-menu top">
-        <li>Skin
-          <ul id="styler">
-            <li><a href="javascript: void(0)" title="switch styling" id="skin-clean">Default</a></li>
-            <li><a href="javascript: void(0)" title="switch styling" id="skin-dark">Darkness</a></li>
-          </ul>
-        </li>
-        <li>Typography
-          <ul id="typer">
-            <li><a href="javascript: void(0)" title="switch styling" id="typography-sans">Sans</a></li>
-            <li><a href="javascript: void(0)" title="switch styling" id="typography-serif">Serif</a></li>
-          </ul>
-        </li>
-
-      </ul>
-
-      <span class="tagline">Sponsored by <a href="http://neotechnology.com">Neo Technology</a></span>
-    </div>
-    
-  </div>
-  
-</div>
-
-<!-- Super Container for section header -->
-<div class="super-container full-width" id="section-header">
-
-  <!-- 960 Container -->
-  <div class="container">     
-    
-    <!-- Header -->
-    <header>
-    <div class="sixteen columns">
-      
-      <!-- Branding -->
-      <hgroup class="six columns alpha">
-        <a href="{{ root_url }}/">
-          <h1 id="logo"><img src="{{ root_url }}/assets/images/theme/neo4j-logo/logo.svg" alt="logo" />{{ site.title }}</h1>
-        </a>
-
-<!--         {% if site.subtitle %}
-        <h2>{{ site.subtitle }}</h2>
-        {% endif %}
- -->      
-      </hgroup>
-      <!-- /End Branding -->
-      
-      <div class="ten columns omega">
-       <div class="header-advert">
+    <nav class="ten columns omega">
+      <div class="header-advert">
         <p><strong>Neo4j {{ site.latest_version }}</strong></p>
-        <a href="http://blog.neo4j.org/2012/06/neo4j-18m04-happy-paths.html" id="readme" class="button yellow"><strong>Read Me</strong></a>
-        <a href="{{ root_url }}/download" id="download" class="button green"><strong>Download</strong></a>
-        </div>
-      </div>  
-      
-      <hr class="remove-bottom"/>
+        <a href="http://blog.neo4j.org/2012/07/neo4j-18m06-rolling-upgrades.html" id="readme" class="button yellow">Read Me</a>
+        <a href="{{ root_url }}/download" id="download" class="button green">Download</a>
+      </div>
+    </nav>  
+  </div>
+</div>
+    
+<div class="browse-menu clearfix super-container full-width hidden-if-js">
+
+    <div class="container">
+      <div class="two columns">
+        <h2><a href="{{ root_url }}/"><strong>Start</strong> <span>Your Path</span></a></h2>
+      </div>
+      <div class="fourteen columns clearfix">
+      <ul>
+        <li><a href="{{ root_url }}/about">About Neo4j</a></li>
+        <li><a href="http://console.neo4j.org">Try Live</a></li>
+        <li><a href="{{ root_url }}/download/">Download</a></li>
+      </ul>
+      </div>
     </div>
     
-    <!-- Menu -->
-    <div class="sixteen columns" id="menu">
-      
-      <div class="twelve columns alpha navigation">
-        
-        <!-- Default Superfish Nav (add/remove "light" class to toggle visual styling) -->
-        <ul class="sf-menu light">
-          <li><a href="{{ root_url }}/"><strong>Start</strong> <span>First Steps</span></a>
-           <ul>
-             <li><a href="{{ root_url }}/about">About Neo4j</a></li>
-             <li><a href="http://console.neo4j.org">Try Live</a></li>
-             <li><a href="{{ root_url }}/download/">Download</a></li>
-           </ul>
-          </li>
-          <li><a href="{{ root_url }}/learn/"><strong>Learn</strong> <span>What, Why, How</span></a>
-            <ul>
-              <li><a href="http://docs.neo4j.org/">Tutorials</a></li>
-              <li><a href="http://docs.neo4j.org/">Neo4j Manual</a></li>
-              <li><a href="http://video.neo4j.org">Screencasts</a></li>
-              <li><a href="{{ root_url }}/blog/">Blog</a></li>
-            </ul>
-          </li>
-          <li><a href="{{ root_url }}/portfolio.html"><strong>Build</strong> <span>Any Application</span></a>
-            <ul>
-              <li><a href="{{ root_url }}/portfolio-2.html">Language Drivers</a></li>
-              <li><a href="{{ root_url }}/portfolio-3.html">Spring Data Neo4j</a></li>
-              <li><a href="{{ root_url }}/portfolio-4.html">Neo4j Cloud</a></li>
-              <li><a href="{{ root_url }}/portfolio-4.html">Frameworks</a></li>
-            </ul>           
-          </li>
-          <li><a href="{{ root_url }}/about/"><strong>Participate</strong> <span>In the Community</span></a>
-            <ul>
-              <li><a href="http://groups.google.com/group/neo4j/">Google Group</a></li>
-              <li><a href="http://stackoverflow.com/questions/tagged/neo4j">Stack Overflow</a></li>
-              <li><a href="http://neo4j.meetup.com/">Meetups</a></li>
-              <li><a href="http://github.com/neo4j/">Git Hub</a></li>
-            </ul>
-          </li>
-          <li><a href="{{ root_url }}/about/"><strong>Showcase</strong> <span>Neo4j in Action</span></a>
-            <ul>
-              <li><a href="{{ root_url }}/lorem.html">Success Stories</a></li>
-              <li><a href="{{ root_url }}/lorem.html">Example Applications</a></li>
-            </ul>
-          </li>
-          <li><a href="{{ root_url }}/features/"><strong>Template</strong><span>Layout, elements</span></a>
-            <ul>
-              <li><a href="lorem.html">Pages</a>
-                <ul>
-                  <li><a href="{{ root_url }}/lorem.html">HTML Test Page</a></li>
-                  <li><a href="{{ root_url }}/960.html">Flexible 960.GS</a></li>
-                  <li><a href="{{ root_url }}/blog/">Blog Loop Template</a></li>
-                  <li><a href="{{ root_url }}/blog-post.html">Blog Post Template</a></li>
-                  <li><a href="{{ root_url }}/contact/">Contact</a></li>
-                </ul>
-              </li>
-              <li><a href="{{ root_url }}/portfolio.html">Portfolio</a>
-                <ul>
-                  <li><a href="{{ root_url }}/portfolio-2.html">2 columns</a></li>
-                  <li><a href="{{ root_url }}/portfolio-3.html">3 columns</a></li>
-                  <li><a href="{{ root_url }}/portfolio-4.html">4 columns</a></li>
-                </ul>
-              </li> 
-            </ul>
-          </li>
-        </ul>
-        <!-- /End Default Superfish Nav-->
-        
-        <!-- Responsive Nav - Displays when screen gets small enough -->
-        <form id="responsive-nav" action="insert_action" method="post">
-          <select class="chzn-select">
-            <option value="{{ root_url }}/">Home</option>
-            <option value="{{ root_url }}/about/">About</option>
-            <option value="{{ root_url }}/features/">Features</option>
-            <option value="{{ root_url }}/portfolio.html">Portfolio</option>
-            <option value="{{ root_url }}/contact/">Contact</option>
-          </select>
-        </form>
-        <!-- /End Responsive Nav -->  
-        
-              
-      </div>  
-      
-      <hr class="remove-top"/>
-    </div>  
-     
-    <!-- /End Menu -->
+    <div class="container">
+      <div class="two columns">
+        <h2><a href="{{ root_url }}/learn/"><strong>Learn</strong> <span>What, Why, How</span></a></h2>
+      </div>
+      <div class="fourteen columns">
+      <ul>
+        <li><a href="http://docs.neo4j.org/">Tutorials</a></li>
+        <li><a href="http://docs.neo4j.org/">Neo4j Manual</a></li>
+        <li><a href="http://video.neo4j.org">Videos</a></li>
+        <li><a href="{{ root_url }}/blog/">Blog</a></li>
+      </ul>
+      </div>
+    </div>
     
-    </header>
-    <!-- /End Header -->
-  
+    <div class="container">
+      <div class="two columns">
+        <h2><a href="{{ root_url }}/create/"><strong>Create</strong> <span>Any Application</span></a></h2>
+      </div>
+      <div class="fourteen columns">
+      <ul>
+        <li><a href="{{ root_url }}/languages/">Languages</a></li>
+        <li><a href="{{ root_url }}/spring/">Spring Data</a></li>
+        <li><a href="{{ root_url }}/cloud/">Cloud</a></li>
+      </ul>           
+    </div>
   </div>
-  <!-- End 960 Container -->
   
-</div>
-<!-- End SuperContainer -->
-
+  <div class="container">
+    <div class="two columns">
+    <h2><a href="{{ root_url }}/participate/"><strong>Participate</strong> <span>In Community</span></a></h2>
+    </div>
+    <div class="fourteen columns">
+      <ul>
+        <li><a href="http://groups.google.com/group/neo4j/">Google Group</a></li>
+        <li><a href="http://stackoverflow.com/questions/tagged/neo4j">Stack Overflow</a></li>
+        <li><a href="http://neo4j.meetup.com/">Meetups</a></li>
+        <li><a href="http://github.com/neo4j/">Git Hub</a></li>
+      </ul>
+    </div>
+  </div>
+  
+</div>  

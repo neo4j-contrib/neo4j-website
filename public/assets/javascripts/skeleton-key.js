@@ -33,17 +33,17 @@ $(window).load(function () {
 		 //	 $("#portfolio-list .module-container").removeClass("sixteen columns").addClass("four columns");
 		 //	 $("#portfolio-list .module-img").removeClass("twelve columns alpha");
 		 //	 $("#portfolio-list .module-meta").fadeOut(100).removeClass("four columns alpha omega visible");
-		 	 $(".list_btn").css("opacity","1");
-		 	 $(".hybrid_btn").css("opacity","1");
-		 	 $(".grid_btn").css("opacity","0.5");
+//		 	 $(".list_btn").css("opacity","1");
+//		 	 $(".hybrid_btn").css("opacity","1");
+//		 	 $(".grid_btn").css("opacity","0.5");
 		 
 		 // Hybrid View Defaults (uncomment to activate)
-		 //	 $("#portfolio-list .module-container").removeClass("sixteen columns").addClass("four columns");
-		 //	 $("#portfolio-list .module-img").removeClass("twelve columns alpha");
-		 //  $("#portfolio-list .module-meta").fadeIn(300).removeClass("omega").addClass("four columns alpha visible");
-		 //	 $(".list_btn").css("opacity","1");
-		 //  $(".hybrid_btn").css("opacity","0.5");
-		 //	 $(".grid_btn").css("opacity","1");
+		 	 $("#portfolio-list .module-container").removeClass("sixteen columns").addClass("four columns");
+		 	 $("#portfolio-list .module-img").removeClass("twelve columns alpha");
+		   $("#portfolio-list .module-meta").fadeIn(300).removeClass("omega").addClass("four columns alpha visible");
+		 	 $(".list_btn").css("opacity","1");
+		   $(".hybrid_btn").css("opacity","0.5");
+		 	 $(".grid_btn").css("opacity","1");
 			 
 			 
 		 // List View Defaults (uncomment to activate)

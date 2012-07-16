@@ -6,9 +6,9 @@ url: http://neo4j-org.heroku.com
 title: Neo4j
 subtitle: the graph database
 author: Neo Technology
-latest_version: 1.8.M04
+latest_version: 1.8.M06
 simple_search: http://google.com/search
-description: Neo4j is an open-source graph database
+description: Neo4j is an open source graph database
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in

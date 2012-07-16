@@ -1,7 +1,5 @@
 /* @override http://localhost:4000/assets/stylesheets/skin-clean.css */
 
-
-
 /* MAIN BG*/
 body, 
 h2.title span, 
@@ -28,6 +26,14 @@ ul.tabs li a.active:after{
 	z-index: -1;
 	}
 	
+.main-header {
+	height:  72px;
+}
+
+#content {
+	margin-top: 12px;
+}
+
 /* FOOTER */
 #section-tophat{
 	border-bottom: 2px solid #ddd;
@@ -40,9 +46,9 @@ ul.tabs li a.active:after{
 }
 
 #logo img {
-	width: 44px;
-	height: 55px;
-	margin-right: 12px;
+  margin-top: 10px;
+	width: 188px;
+	height: 50px;
 }
 
 /* SUBFOOTER */
@@ -57,8 +63,26 @@ ul.tabs li a.active:after{
 
 li div.slide {
 	background: #f6f6f6;
-	width: 914px;
-	height: 366px;
+	height: 357px;
 	border: 1px solid #5e5e5e;
 	padding: 12px;
+}
+
+.header-advert {
+	bottom: 8px;
+	right:  0px;
+	position: absolute;
+}
+.main-header nav {
+	height: 72px;
+	  margin-bottom: 0px;
+	bottom: 4px;
+	position: relative;
+}
+.header-advert .button {
+	  margin-bottom: 0px;
+}
+
+#SubscribeForm fieldset input, #SubscribeForm fieldset span {
+	display: inline;
 }

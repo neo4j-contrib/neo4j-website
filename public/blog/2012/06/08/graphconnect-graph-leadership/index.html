@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>GraphConnect: graph leadership visualized - Neo4j</title>
+  <title>GraphConnect: graph leadership visualized → Neo4j</title>
   <meta name="author" content="Neo Technology">
 
   
@@ -37,13 +37,14 @@
   <!-- Fonts from typekit
     ================================================== -->
   <script type="text/javascript" src="http://use.typekit.com/jxu6gip.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<!--  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
   
   <!-- CSS
     ================================================== -->
   <link rel="stylesheet" href="/assets/stylesheets/styles.css" />
   <link type="text/css" rel="stylesheet" id="skin" href="/assets/stylesheets/skin-clean.css" />
-  <link type="text/css" rel="stylesheet" id="type" href="/assets/stylesheets/typography-sans.css" />
+  <link type="text/css" rel="stylesheet" id="type" href="/assets/stylesheets/typography.css" />
+  <link type="text/css" rel="stylesheet" id="type" href="/assets/stylesheets/peekaboo.css" />
   
   
   <!-- Favicons
@@ -71,167 +72,80 @@
 
 <body   >
   <header role="banner">
-
-<!-- Super Container for tophat -->
-<div class="super-container full-width" id="section-tophat">
-
-  <!-- 960 Container -->
-  <div class="container">     
+<!-- Header -->
+<div class="main-header clearfix super-container full-width ">
+  <div class="container"> <!-- 960grid -->
+    <hgroup class="six columns alpha">
+      <a class="browse" href="#"><h1 id="logo"><img src="/assets/images/theme/neo4j-logo/header-logo.png" alt="logo"></h1></a>
+    </hgroup>
     
-    <div class="sixteen columns">
-      <ul class="sf-menu top">
-        <li>Skin
-          <ul id="styler">
-            <li><a href="javascript: void(0)" title="switch styling" id="skin-clean">Default</a></li>
-            <li><a href="javascript: void(0)" title="switch styling" id="skin-dark">Darkness</a></li>
-          </ul>
-        </li>
-        <li>Typography
-          <ul id="typer">
-            <li><a href="javascript: void(0)" title="switch styling" id="typography-sans">Sans</a></li>
-            <li><a href="javascript: void(0)" title="switch styling" id="typography-serif">Serif</a></li>
-          </ul>
-        </li>
+    <nav class="ten columns omega">
+      <div class="header-advert">
+        <p><strong>Neo4j 1.8.M06</strong></p>
+        <a href="http://blog.neo4j.org/2012/07/neo4j-18m06-rolling-upgrades.html" id="readme" class="button yellow">Read Me</a>
+        <a href="/download" id="download" class="button green">Download</a>
+      </div>
+    </nav>  
+  </div>
+</div>
+    
+<div class="browse-menu clearfix super-container full-width hidden-if-js">
 
+    <div class="container">
+      <div class="two columns">
+        <h2><a href="/"><strong>Start</strong> <span>Your Path</span></a></h2>
+      </div>
+      <div class="fourteen columns clearfix">
+      <ul>
+        <li><a href="/about">About Neo4j</a></li>
+        <li><a href="http://console.neo4j.org">Try Live</a></li>
+        <li><a href="/download/">Download</a></li>
       </ul>
-
-      <span class="tagline">Sponsored by <a href="http://neotechnology.com">Neo Technology</a></span>
+      </div>
     </div>
     
-  </div>
-  
-</div>
-
-<!-- Super Container for section header -->
-<div class="super-container full-width" id="section-header">
-
-  <!-- 960 Container -->
-  <div class="container">     
-    
-    <!-- Header -->
-    <header>
-    <div class="sixteen columns">
-      
-      <!-- Branding -->
-      <hgroup class="six columns alpha">
-        <a href="/">
-          <h1 id="logo"><img src="/assets/images/theme/neo4j-logo/logo.svg" alt="logo" />Neo4j</h1>
-        </a>
-
-<!--         
-        <h2>the graph database</h2>
-        
- -->      
-      </hgroup>
-      <!-- /End Branding -->
-      
-      <div class="ten columns omega">
-       <div class="header-advert">
-        <p><strong>Neo4j 1.8.M04</strong></p>
-        <a href="http://blog.neo4j.org/2012/06/neo4j-18m04-happy-paths.html" id="readme" class="button yellow"><strong>Read Me</strong></a>
-        <a href="/download" id="download" class="button green"><strong>Download</strong></a>
-        </div>
-      </div>  
-      
-      <hr class="remove-bottom"/>
+    <div class="container">
+      <div class="two columns">
+        <h2><a href="/learn/"><strong>Learn</strong> <span>What, Why, How</span></a></h2>
+      </div>
+      <div class="fourteen columns">
+      <ul>
+        <li><a href="http://docs.neo4j.org/">Tutorials</a></li>
+        <li><a href="http://docs.neo4j.org/">Neo4j Manual</a></li>
+        <li><a href="http://video.neo4j.org">Videos</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+      </div>
     </div>
     
-    <!-- Menu -->
-    <div class="sixteen columns" id="menu">
-      
-      <div class="twelve columns alpha navigation">
-        
-        <!-- Default Superfish Nav (add/remove "light" class to toggle visual styling) -->
-        <ul class="sf-menu light">
-          <li><a href="/"><strong>Start</strong> <span>First Steps</span></a>
-           <ul>
-             <li><a href="/about">About Neo4j</a></li>
-             <li><a href="http://console.neo4j.org">Try Live</a></li>
-             <li><a href="/download/">Download</a></li>
-           </ul>
-          </li>
-          <li><a href="/learn/"><strong>Learn</strong> <span>What, Why, How</span></a>
-            <ul>
-              <li><a href="http://docs.neo4j.org/">Tutorials</a></li>
-              <li><a href="http://docs.neo4j.org/">Neo4j Manual</a></li>
-              <li><a href="http://video.neo4j.org">Screencasts</a></li>
-              <li><a href="/blog/">Blog</a></li>
-            </ul>
-          </li>
-          <li><a href="/portfolio.html"><strong>Build</strong> <span>Any Application</span></a>
-            <ul>
-              <li><a href="/portfolio-2.html">Language Drivers</a></li>
-              <li><a href="/portfolio-3.html">Spring Data Neo4j</a></li>
-              <li><a href="/portfolio-4.html">Neo4j Cloud</a></li>
-              <li><a href="/portfolio-4.html">Frameworks</a></li>
-            </ul>           
-          </li>
-          <li><a href="/about/"><strong>Participate</strong> <span>In the Community</span></a>
-            <ul>
-              <li><a href="http://groups.google.com/group/neo4j/">Google Group</a></li>
-              <li><a href="http://stackoverflow.com/questions/tagged/neo4j">Stack Overflow</a></li>
-              <li><a href="http://neo4j.meetup.com/">Meetups</a></li>
-              <li><a href="http://github.com/neo4j/">Git Hub</a></li>
-            </ul>
-          </li>
-          <li><a href="/about/"><strong>Showcase</strong> <span>Neo4j in Action</span></a>
-            <ul>
-              <li><a href="/lorem.html">Success Stories</a></li>
-              <li><a href="/lorem.html">Example Applications</a></li>
-            </ul>
-          </li>
-          <li><a href="/features/"><strong>Template</strong><span>Layout, elements</span></a>
-            <ul>
-              <li><a href="lorem.html">Pages</a>
-                <ul>
-                  <li><a href="/lorem.html">HTML Test Page</a></li>
-                  <li><a href="/960.html">Flexible 960.GS</a></li>
-                  <li><a href="/blog/">Blog Loop Template</a></li>
-                  <li><a href="/blog-post.html">Blog Post Template</a></li>
-                  <li><a href="/contact/">Contact</a></li>
-                </ul>
-              </li>
-              <li><a href="/portfolio.html">Portfolio</a>
-                <ul>
-                  <li><a href="/portfolio-2.html">2 columns</a></li>
-                  <li><a href="/portfolio-3.html">3 columns</a></li>
-                  <li><a href="/portfolio-4.html">4 columns</a></li>
-                </ul>
-              </li> 
-            </ul>
-          </li>
-        </ul>
-        <!-- /End Default Superfish Nav-->
-        
-        <!-- Responsive Nav - Displays when screen gets small enough -->
-        <form id="responsive-nav" action="insert_action" method="post">
-          <select class="chzn-select">
-            <option value="/">Home</option>
-            <option value="/about/">About</option>
-            <option value="/features/">Features</option>
-            <option value="/portfolio.html">Portfolio</option>
-            <option value="/contact/">Contact</option>
-          </select>
-        </form>
-        <!-- /End Responsive Nav -->  
-        
-              
-      </div>  
-      
-      <hr class="remove-top"/>
-    </div>  
-     
-    <!-- /End Menu -->
-    
-    </header>
-    <!-- /End Header -->
-  
+    <div class="container">
+      <div class="two columns">
+        <h2><a href="/create/"><strong>Create</strong> <span>Any Application</span></a></h2>
+      </div>
+      <div class="fourteen columns">
+      <ul>
+        <li><a href="/languages/">Languages</a></li>
+        <li><a href="/spring/">Spring Data</a></li>
+        <li><a href="/cloud/">Cloud</a></li>
+      </ul>           
+    </div>
   </div>
-  <!-- End 960 Container -->
   
-</div>
-<!-- End SuperContainer -->
-
+  <div class="container">
+    <div class="two columns">
+    <h2><a href="/participate/"><strong>Participate</strong> <span>In Community</span></a></h2>
+    </div>
+    <div class="fourteen columns">
+      <ul>
+        <li><a href="http://groups.google.com/group/neo4j/">Google Group</a></li>
+        <li><a href="http://stackoverflow.com/questions/tagged/neo4j">Stack Overflow</a></li>
+        <li><a href="http://neo4j.meetup.com/">Meetups</a></li>
+        <li><a href="http://github.com/neo4j/">Git Hub</a></li>
+      </ul>
+    </div>
+  </div>
+  
+</div>  
 
 </header>
   <nav role="navigation"><!-- <ul class="subscription" data-subscription="rss">
@@ -374,12 +288,7 @@
         
         <br />
         <hr />
-          
-
-        <!-- COMMENTS SECTION -->
         
-        
-      
       </div>  
       <!-- /#ENTRY COLUMN -->   
       
@@ -475,44 +384,13 @@
 <!-- /End Super Container -->
     </div>
   </div>
-  <footer role="contentinfo"><!-- Super Container -->
-<footer class="super-container full-width" id="section-footer">    
+  <footer role="contentinfo"><footer class="super-container full-width" id="section-footer">    
 
   <!-- 960 Container -->
   <div class="container">
   
-    <!-- footer -->
-    <footer>
-            
 
       <div class="one-third column alpha">
-        <section>
-  <h1>About Me</h1>
-  <p>A little something about me.</p>
-</section>
-
-      </div>
-      <div class="one-third column">
-        
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("neo4j", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/neo4j" class="twitter-follow-button" data-show-count="false">Follow @neo4j</a>
-  
-</section>
-
-
-      </div>
-      <div class="one-third column omega">
         <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
@@ -533,16 +411,35 @@
 </section>
 
       </div>
+      <div class="one-third column">
+        <section>
+  <h1>Worldwide Events</h1>
+  <iframe src="https://www.google.com/calendar/b/0/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=300&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=neopersistence.com_3p7hh97rfcu76paib7l2dp4llo%40group.calendar.google.com&amp;color=%2329527A&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="350" height="250" frameborder="0" scrolling="no"></iframe>
+</section>
 
-            
-    </footer>
-    <!-- /End Footer -->    
+      </div>
+      <div class="one-third column omega">
+      </div>
 
   </div>
   <!-- /End 960 Container -->
+  <div class="container">
+    <div class="feature eight columns">
+			<form action="http://groups.google.com/group/neo4j/boxsubscribe" id="SubscribeForm">
+					<fieldset class="selfClear">
+						<label for="regularInput">Join the discussion:</label>
+						<input type="hidden" name="hl" value="en">
+						<input type="email" name="email" class="email" placeholder="Your Email" required="required">
+						<button type="submit">Join</button>
+					</fieldset>
+			</form>
+    </div>
+    <div class="feature eight columns">
+    
+    </div>
   
+  </div>
 </footer>
-<!-- /End Super Container -->
 
 
 <!-- Super Container -->
@@ -552,7 +449,7 @@
   <div class="container">
 
     <div class="sixteen columns"> 
-        <span class="copyright">&copy; 2012 - Neo Technology</span>
+        <span class="copyright">&copy; 2012 - <a href="http://neotechnology.com"><img src="/assets/images/theme/neotech-logo/tiny-neo.png"></a></span>
         <span class="colophon">With love, from Sweden.</span>
     </div>
 
@@ -604,17 +501,8 @@
   <script src="/assets/javascripts/jquery.flexslider-min.js"></script> 
   <script src="/assets/javascripts/filterable.pack.js"></script>
   <script src="/assets/javascripts/skeleton-key.js"></script>
+  <script src="/assets/javascripts/peekaboo.js"></script>
   
-  <script type="text/javascript" src="/assets/javascripts/jquery.style-switcher.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#styler').styleSwitcher({linkid:"skin"});
-    });
-    
-    $(document).ready(function() {
-      $('#typer').styleSwitcher({linkid:"type"});
-    });
-  </script>
   
 
 
