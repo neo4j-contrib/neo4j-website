@@ -1,8 +1,7 @@
 /* @override http://localhost:4000/assets/stylesheets/skin-clean.css */
 
-/* MAIN BG*/
-body, 
-h2.title span, 
+/* MAIN BG*/ 
+body,
 ul.tabs li a.active{ 
 	background: #fdfdfd;
 	background: rgba(246,246,246,0.5) ;
@@ -10,7 +9,6 @@ ul.tabs li a.active{
 	position: relative;
 	z-index: 1;
 } 
-
 body:after, 
 /* h2.title span:after, */
 ul.tabs li a.active:after{  
@@ -30,8 +28,15 @@ ul.tabs li a.active:after{
 	height:  72px;
 }
 
+#main {
+	padding-top: 60px;
+	padding-bottom: 40px;
+	position: relative;
+	z-index: 1;
+  background: url(/assets/images/theme/backgrounds/eggshell.jpg) repeat;
+}
+
 #content {
-	margin-top: 12px;
 }
 
 /* FOOTER */
@@ -61,11 +66,19 @@ ul.tabs li a.active:after{
 	background: black;
 }
 
-li div.slide {
-	background: #f6f6f6;
-	height: 357px;
-	border: 1px solid #5e5e5e;
+.slides li {
+	background: white;
+	border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	border: 1px solid #e3e3e3;
+}
+
+.half-slide {
 	padding: 12px;
+	float: left;
+	height: 357px;
+	width: 444px;
 }
 
 .header-advert {
@@ -75,7 +88,7 @@ li div.slide {
 }
 .main-header nav {
 	height: 72px;
-	  margin-bottom: 0px;
+	margin-bottom: 0px;
 	bottom: 4px;
 	position: relative;
 }
@@ -85,4 +98,19 @@ li div.slide {
 
 #SubscribeForm fieldset input, #SubscribeForm fieldset span {
 	display: inline;
+}
+.module-img {
+	background-color: white;
+	border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	border: 1px solid #e3e3e3;
+}
+.four .module-img {
+	width: 218px;
+	height: 155px;
+}
+
+.four .module-img span {
+    height: 163px;
 }

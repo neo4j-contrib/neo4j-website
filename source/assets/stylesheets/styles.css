@@ -1,6 +1,4 @@
-/* @override 
-	http://localhost:4000/assets/stylesheets/styles.css
-*/
+/* @override http://localhost:4000/assets/stylesheets/styles.css */
 
 /*
 * Super Skeleton
@@ -52,7 +50,6 @@
 
 /* Set BG */
 body, 
-h2.title span, 
 ul.tabs li a.active{ 
 	background: #fdfdfd;
 	background: rgba(246,246,246,0.5) ;
@@ -286,7 +283,6 @@ ul.social li:hover{
 /* #FOOTER */
 #section-footer{
 	background: transparent url("../images/theme/backgrounds/noise-grey.jpg") repeat;
-	margin-top: 40px;
 	border-top: 2px solid #ddd;
 	padding: 40px 0;
 }
@@ -729,7 +725,7 @@ span.list_btn:hover, span.grid_btn:hover, span.hybrid_btn:hover{cursor: pointer;
 
 .portfolio-view{float: right;}
 
-.portfolio-filters span, .portfolio-view span{margin-right: 10px; float: left;
+.portfolio-filters span, .portfolio-view span{margin-right: 10px;
 }
 
 .portfolio-view span{float: left; margin-top: 6px;}

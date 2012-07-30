@@ -23,9 +23,11 @@ footer: true
 			</div>
 			<!-- /End Row Break-->		
 			
+			
 			<div class="sixteen columns portfolio-nav">
 				<p class="portfolio-filters" id="portfolio-filter">
-					<span>Language:
+				  <span class="portfolio-filter-category">Language:</span>
+					<span>
   					<a class="button" href="#all">All</a>
   					<a class="button" href="#java">Java</a>
   					<a class="button" href="#dotnet">.Net</a>
@@ -36,25 +38,43 @@ footer: true
   					<a class="button" href="#clojure">Clojure</a> 
   					<a class="button" href="#scala">Scala</a> 
 					</span>
-				  <span>API:
+				  <span class="portfolio-filter-category">API:</span>
+				  <span>
   					<a class="button" href="#rest">REST</a> 
   					<a class="button" href="#embedded">Embedded</a> 
 					</span>
 				</p>
 				
 				<br /><br />
-				<hr class="half-bottom" />
 			</div> 
+			
+			<hr class="half-bottom" />
 			
 			<!-- Portfolio List-->  
 			<div id="portfolio-list" class="content">
-				
+			
+			<div class="four columns module-container rest">				
+				<div class="module">						
+					<div class="module-img">							
+						<a href="http://docs.neo4j.org/chunked/snapshot/rest-api.html">
+							<img src="{{ base_url }}/assets/images/languages/neo4jrest.png" title="Neo4j REST" alt="image" />
+							<span></span> <!-- replaced with overlay link image -->
+						</a>							
+					</div>
+					<div class="module-meta">
+						<h5>Neo4j REST API</h5>	
+						<hr class="half-bottom" />
+						<p>Discoverable, language-neutral data access from anything that can send HTTP requests. You could write a whole application with just bash scripts and curl.</p>
+					</div>						
+				</div>				
+			</div>	
+			
 				<div class="four columns module-container java embedded rest">				
 					<div class="module">						
 						<div class="module-img">							
 							<a href="http://www.springsource.org/spring-data/neo4j">
 								<img src="{{ base_url }}/assets/images/languages/sdn.png" title="Spring Data Neo4j" alt="image" />
-								<span></span>
+								<span></span> <!-- replaced with overlay link image -->
 							</a>							
 						</div>
 						<div class="module-meta">
@@ -70,7 +90,7 @@ footer: true
 						<div class="module-img">							
 							<a href="http://docs.neo4j.org/chunked/stable/tutorials-java-embedded.html">
 								<img src="{{ base_url }}/assets/images/languages/embedded.png" title="Neo4j Embedded" alt="image" />
-								<span></span>
+								<span></span> <!-- replaced with overlay link image -->
 							</a>							
 						</div>
 						<div class="module-meta">
@@ -86,7 +106,7 @@ footer: true
 						<div class="module-img">							
 							<a href="https://github.com/andreasronge/neo4j">
 								<img src="{{ base_url }}/assets/images/languages/rails.png" title="neo4j.rb" alt="image" />
-								<span></span>
+								<span></span> <!-- replaced with overlay link image -->
 							</a>							
 						</div>
 						<div class="module-meta">
@@ -102,7 +122,7 @@ footer: true
 						<div class="module-img">							
 							<a href="https://github.com/maxdemarzi/neography/">
 								<img src="{{ base_url }}/assets/images/languages/ruby.png" title="Neography" alt="image" />
-								<span></span>
+								<span></span> <!-- replaced with overlay link image -->
 							</a>							
 						</div>
 						<div class="module-meta">
@@ -118,7 +138,7 @@ footer: true
 						<div class="module-img">							
 							<a href="http://clojureneo4j.info/">
 								<img src="{{ base_url }}/assets/images/languages/clojure.png" title="Neocons Clojure" alt="image" />
-								<span></span>
+								<span></span> <!-- replaced with overlay link image -->
 							</a>							
 						</div>
 						<div class="module-meta">
@@ -134,7 +154,7 @@ footer: true
 						<div class="module-img">							
 							<a href="https://github.com/jadell/neo4jphp/wiki/Introduction">
 								<img src="{{ base_url }}/assets/images/languages/php.png" title="Neo4jPHP" alt="image" />
-								<span></span>
+								<span></span> <!-- replaced with overlay link image -->
 							</a>							
 						</div>
 						<div class="module-meta">
@@ -150,7 +170,7 @@ footer: true
 						<div class="module-img">							
 							<a href="http://hg.readify.net/neo4jclient/wiki/Home/">
 								<img src="{{ base_url }}/assets/images/languages/dotnet.png" title="Neo4jClient .net" alt="image" />
-								<span></span>
+								<span></span> <!-- replaced with overlay link image -->
 							</a>							
 						</div>
 						<div class="module-meta">
@@ -166,7 +186,7 @@ footer: true
 						<div class="module-img">							
 							<a href="https://github.com/elado/neoid">
 								<img src="{{ base_url }}/assets/images/languages/rails.png" title="Neoid" alt="image" />
-								<span></span>
+								<span></span> <!-- replaced with overlay link image -->
 							</a>							
 						</div>
 						<div class="module-meta">
@@ -182,7 +202,7 @@ footer: true
 						<div class="module-img">							
 							<a href="http://py2neo.org/">
 								<img src="{{ base_url }}/assets/images/languages/py2neo.png" title="py2neo" alt="image" />
-								<span></span>
+								<span></span> <!-- replaced with overlay link image -->
 							</a>							
 						</div>
 						<div class="module-meta">
@@ -198,7 +218,7 @@ footer: true
 						<div class="module-img">							
 							<a href="http://bulbflow.com/overview/">
 								<img src="{{ base_url }}/assets/images/languages/bulbflow.png" title="Bulbflow" alt="image" />
-								<span></span>
+								<span></span> <!-- replaced with overlay link image -->
 							</a>							
 						</div>
 						<div class="module-meta">
@@ -214,7 +234,7 @@ footer: true
 						<div class="module-img">							
 							<a href="http://bulbflow.com/overview/">
 								<img src="{{ base_url }}/assets/images/languages/django.png" title="neo4django" alt="image" />
-								<span></span>
+								<span></span> <!-- replaced with overlay link image -->
 							</a>							
 						</div>
 						<div class="module-meta">
@@ -231,7 +251,7 @@ footer: true
 						<div class="module-img">							
 							<a href="http://bulbflow.com/overview/">
 								<img src="{{ base_url }}/assets/images/languages/nodejs.png" title="node-neo4j" alt="image" />
-								<span></span>
+								<span></span> <!-- replaced with overlay link image -->
 							</a>							
 						</div>
 						<div class="module-meta">
@@ -247,7 +267,7 @@ footer: true
 						<div class="module-img">							
 							<a href="https://github.com/FaKod/neo4j-scala/">
 								<img src="{{ base_url }}/assets/images/languages/scala.png" title="neo4j-scala" alt="image" />
-								<span></span>
+								<span></span> <!-- replaced with overlay link image -->
 							</a>							
 						</div>
 						<div class="module-meta">

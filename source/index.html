@@ -24,21 +24,33 @@ footer: true
 			<div class="flexslider-container">
 				<div class="flexslider">
 				  <ul class="slides">
-				    <li>
-				     <div class="slide">
-				       <h1>Mmmm… sliders.</h1>
-				     </div>
+				    <li> <!-- learn something -->
+  				    <div class="half-slide">
+	  			       <h1>GraphConnect.</h1>
+		  		     </div>
+		  		     <a href="http://graphconnect.com">
+  			         <img src="{{ root_url }}/assets/images/slides/GC_slide.jpg" alt="GraphConnect" />
+			         </a>
 				    </li>
-				    <li>
-				      <a href="{{ root_url }}/assets/images/slides/slide2.jpg" data-rel="prettyPhoto[SuperSkeleton]">
+				    <li> <!-- create -->
+              <div class="half-slide">
+                 <h1>GraphConnect.</h1>
+               </div>
+				      <a href="{{ root_url }}/assets/images/slides/slide2.jpg">
 				      	<img src="{{ root_url }}/assets/images/slides/slide2.jpg" alt="Slide 2" />
 				      </a>
 				      <p class="flex-caption">Captions and cupcakes. Winning combination.</p>
 				    </li>
-				    <li>
-				      <a href="{{ root_url }}/assets/images/slides/slide3.jpg" data-rel="prettyPhoto[SuperSkeleton]">
-				        <img src="{{ root_url }}/assets/images/slides/slide3.jpg" alt="Slide 3" />
-				      </a>
+				    <li> <!-- participate -->
+              <div class="half-slide">
+                 <h1>GraphConnect</h1>
+                   <span>innovate</span>
+                   <span>share</span>
+                   <span>connect</span>
+               </div>
+               <a href="http://graphconnect.com">
+                 <img src="{{ root_url }}/assets/images/slides/GC_slide.jpg" alt="GraphConnect" />
+               </a>
 				    </li> 
 				  </ul>
 				</div>
@@ -76,20 +88,21 @@ footer: true
 		<div class="one-third column">				
 			<div class="module">						
 				<div class="module-img">							
-					<a href="http://src.sencha.io/http://mdnw.net/reactor/skeleton/demo-images/700x500/7.jpg" data-rel="prettyPhoto[Gallery]">
-						<img src="http://src.sencha.io/http://mdnw.net/reactor/skeleton/demo-images/700x500/7.jpg" alt="image"/>
+					<a href="{{ root_url }}/learn/">
+						<img src="{{ root_url }}/assets/images/slides/learn.png" alt="image"/>
 						<span></span>
 					</a>							
-					<div class="lightboxLink">
-						<a class="popLink boxLink" href="http://src.sencha.io/http://mdnw.net/reactor/skeleton/demo-images/700x500/7.jpg" data-rel="prettyPhoto[Lightbox]" title="Lightbox" ></a>
-				    </div>						    
 					<div class="thumbLink">
-					    <a class="popLink" href="#" title="Full Post"></a>
+					    <a class="popLink" href="{{ root_url }}/learn/" title="Learn"></a>
 				    </div>						    
 				</div>				
 				<div class="module-meta">
-					<h5>Flexible Grid</h5>	
-					<p>SuperSkeleton is more than a template, it's a comprehensive framework; A collection of several incredibly powerful scripts and CSS structures that's been tied together into a kit that's perfect as a jumping off point of your next project.</p>
+					<h5>Learn About Neo4j</h5>	
+					<ul>
+					  <li>what is a graph database?</li>
+					  <li>common use cases</li>
+					  <li>querying</li>
+				  </ul>
 				</div>						
 			</div>				
 		</div>
@@ -97,20 +110,21 @@ footer: true
 		<div class="one-third column">				
 			<div class="module">						
 				<div class="module-img">							
-					<a href="http://src.sencha.io/http://mdnw.net/reactor/skeleton/demo-images/700x500/2.jpg" data-rel="prettyPhoto[Gallery]" >
-						<img src="http://src.sencha.io/http://mdnw.net/reactor/skeleton/demo-images/700x500/2.jpg" alt="image" />
+					<a href="{{ root_url }}/create/" >
+						<img src="{{ root_url }}/assets/images/slides/create.png" alt="image" />
 						<span></span>
 					</a>							
-					<div class="lightboxLink">
-						<a class="popLink boxLink" href="http://src.sencha.io/http://mdnw.net/reactor/skeleton/demo-images/700x500/2.jpg" data-rel="prettyPhoto[Lightbox]" title="Lightbox" ></a>
-				    </div>						    
 					<div class="thumbLink">
-					    <a class="popLink" href="#" title="Full Post"></a>
+					    <a class="popLink" href="{{ root_url }}/create/" title="Create"></a>
 				    </div>						    
 				</div>
 				<div class="module-meta">
-					<h5>Responsive &amp; Bulletproof</h5>	
-					<p>SuperSkeleton is responsive (try resizing your browser)... that means that it'll flex to fit massive screens, or itty bitty iPhone screens (and everything in between). Touch gestures even work on the slider!</p>
+					<h5>Create Any Application</h5>	
+            <ul>
+              <li>getting started</li>
+              <li>any language, any stack</li>
+              <li>production</li>
+            </ul>
 				</div>						
 			</div>				
 		</div>
@@ -118,20 +132,20 @@ footer: true
 		<div class="one-third column">				
 			<div class="module">						
 				<div class="module-img">							
-					<a href="http://src.sencha.io/http://mdnw.net/reactor/skeleton/demo-images/700x500/3.jpg" data-rel="prettyPhoto[Gallery]">
-						<img src="http://src.sencha.io/http://mdnw.net/reactor/skeleton/demo-images/700x500/3.jpg" alt="image" />
+					<a href="{{ root_url }}/participate/">
+						<img src="{{ root_url }}/assets/images/slides/connect.png" alt="image" />
 						<span></span>
 					</a>							
-					<div class="lightboxLink">
-						<a class="popLink boxLink" href="http://src.sencha.io/http://mdnw.net/reactor/skeleton/demo-images/700x500/3.jpg" data-rel="prettyPhoto[Lightbox]" title="Lightbox"></a>
-				    </div>						    
 					<div class="thumbLink"> 
-					    <a class="popLink" href="#" title="Full Post"></a>
+					    <a class="popLink" href="{{ root_url }}/participate/" title="Connect"></a>
 				    </div>						    
 				</div>
 				<div class="module-meta">
-					<h5>Minimalist Styling</h5>
-					<p>SuperSkeleton is well organized. Take what you love, leave what you don't, customize the rest. It's completely in your hands - turn it into the next big thing, or just as your little personal projects, it's up to you. </p>
+					<h5>Participate in the Community</h5>
+					<ul>
+					  <li>discuss online</li>
+					  <li>write about it</li>
+					  <li>meet in person</li>
 				</div>						
 			</div>				
 		</div>
