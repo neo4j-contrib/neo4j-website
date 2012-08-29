@@ -49,10 +49,10 @@ See [Octopress Blogging](http://octopress.org/docs/blogging/) for details.
 
 ## Directories (& some files)
 
-- [.](/tree/master/source) : top-level project directory 
-- [./_config.yml](/tree/master/_config.yml) : configuration and site-wide variables
-- [./source](/tree/master/source) : raw html, markup, css, images and javascript files. edit these
-- [./public](/tree/master/public) : the generated website. **do not edit**
+- . : top-level project directory 
+- [./_config.yml](tree/master/_config.yml) : configuration and site-wide variables
+- [./source](tree/master/source) : raw html, markup, css, images and javascript files. edit these
+- [./public](tree/master/public) : the generated website. **do not edit**
 
 
 ## What is Octopress?
