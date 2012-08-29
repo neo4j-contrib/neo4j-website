@@ -30,16 +30,21 @@ Otherwise you'll need to install bundler, then ask it to install some extra thin
 
 Phew. OK, now you really should be ready. 
 
-### How-to
+## How-to
 
 The project uses a ruby `rakefile` to do perform operations. A `rakefile` is like the
 classic `C` `makefile` but for ruby. 
 
+### Raking the website:
 - create a blog post: `rake new_post["title"]`
-- create a page: `rake new_page[super-awesome/page.html]`
+- create a page: `rake new_page[super-awesome]`
 - preview the site: `rake preview`
+- find files containing text: `rake find["some interesting text"]
+- all of rake's tasks: `rake -T`
 
-Staying up to date, or publishing your changes is done with `git`:
+Web pages are just partial, but normal, html. Or [markdown](http://daringfireball.net/projects/markdown/).
+
+### git'ing things done:
 - update local: `git pull origin master`
 - commit local changes: `git commit -am 'hooray for updates'`
 - share changes: `git push origin master`
@@ -54,8 +59,9 @@ See [Octopress Blogging](http://octopress.org/docs/blogging/) for details.
 - [./source](neo4j-website/tree/master/source) : raw html, markup, css, images and javascript files. edit these
 - [./public](neo4j-website/tree/master/public) : the generated website. **do not edit**
 
+______________________
 
-## What is Octopress?
+### What is Octopress?
 
 Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
 

@@ -375,3 +375,9 @@ task :list do
   puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
   puts "(type rake -T for more detail)\n\n"
 end
+
+# usage rake find['some text to look for']
+desc "Find files containing text in #{source_dir}"
+task :find, :what do |t, args|
+  system "find #{source_dir} -type f -print0 | xargs -0 grep -l #{args.what}"
+end
