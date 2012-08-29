@@ -50,9 +50,9 @@ See [Octopress Blogging](http://octopress.org/docs/blogging/) for details.
 ## Directories (& some files)
 
 - . : top-level project directory 
-- [./_config.yml](tree/master/_config.yml) : configuration and site-wide variables
-- [./source](tree/master/source) : raw html, markup, css, images and javascript files. edit these
-- [./public](tree/master/public) : the generated website. **do not edit**
+- [./_config.yml](neo4j-website/tree/master/_config.yml) : configuration and site-wide variables
+- [./source](neo4j-website/tree/master/source) : raw html, markup, css, images and javascript files. edit these
+- [./public](neo4j-website/tree/master/public) : the generated website. **do not edit**
 
 
 ## What is Octopress?
