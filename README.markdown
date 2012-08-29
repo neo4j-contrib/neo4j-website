@@ -16,7 +16,7 @@ So. You'll need these tools installed:
 **On a Mac?** Cool. You can try the hacked-up `install` script to lead you through installing
 the needed command line tools. If you're feeling brave, you can do this:
 
-  curl https://raw.github.com/neo4j-contrib/neo4j-website/master/install | bash
+    curl https://raw.github.com/neo4j-contrib/neo4j-website/master/install | bash
 
 Optionally, install the Mac [github application](http://mac.github.com) and ask it to "Install command line utility".
 
