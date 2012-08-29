@@ -1,0 +1,33 @@
+#!/bin/sh
+
+require() {
+  need=${1}
+  version_switch=${2}
+  version=${3}
+  howto=${4}
+  why=${5}
+
+  ( command -v ${need} >/dev/null 2>&1 ) && ( ${need} ${version_switch} | grep --silent ${version})
+  if [ $? -eq 1 ]; then
+    echo ${need} ${version} " is required, but it's not installed." 
+    echo ${howto}
+    echo ""
+    echo ${why}
+    exit 1
+  fi 
+}
+
+require "ruby" "--version" "ruby" "ruby should be pre-installed" "Panic, or ask a friend for help."
+require "brew" "--version" "0.9.2" "get it now" "because it is teh awesome"
+require "rvm" "version" "1.15" "curl -L https://get.rvm.io | bash -s stable" "rvm helps with ruby. After installing,\nrun 'rvm requirements' then follow directions under Xcode 4.2 and Homebrew."
+require "ruby" "--version" "1.9.3" "rvm install 1.9.3" "ruby is used for combinining markup with templates to generate the site" 
+require "git" "--version" "git" "brew install git" "git is used for version control of files"
+
+echo "Looks like you are ready to blog! Probably, mostly."
+echo ""
+echo "Do you have a github account, and membership in the neo4j-contrib Web Masters team? Ask @akollegger."
+echo ""
+echo "If you haven't cloned the repository yet do this:"
+echo "git clone git@github.com:neo4j-contrib/neo4j-website.git"
+echo ""
+echo "Finally. Read the readme."
